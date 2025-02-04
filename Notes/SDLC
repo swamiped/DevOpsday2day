@@ -1,0 +1,16 @@
+What is SDLC?
+SDLC is shortform of Software Development Life cycle
+SDLC is a standard practice to deliverying a quality product
+SDLC is process that followed by industry to design, develop and test high quality product
+
+Phases/Standards of SDLC:
+    Planning & Requiring
+    Defining/Documentation
+    Designing[High level design & Low level design]
+    Building 
+    Testing
+    Deploying
+
+Building, Testing, Deploying are the main phases for DevOps engineer fastens the process by automating these phases.
+
+e.g. Agile, Waterfall model ...
