@@ -1,0 +1,78 @@
+OS(Operating System) is a interface between hardware and application. 
+
+Linux
+    - It is a free open source Operating System, 
+    - It is more secure 
+    - have multiple distributions like debian, ubuntu, centos...
+    - It is fast
+[kernel + system libraries + compilers + user processes + system software]
+kernerl is a heart of the operating system, responsible for device management, memory management, process management, system calls.
+
+
+
+
+Fundamentals of shell scripting:
+    - we can communicate with os using shell commands
+
+ssh user@192.168.123.123: to connect to the VM
+ssh-keygen -R <vm_ip_address>: remove the know hosts
+
+ls : list files [options: -a, -ltr]
+pwd: shows present directory
+touch: to create a file
+    e.g. touch my-file
+cd: to change the directory
+
+cat: print a content of a file
+echo: to print text
+vim: to create a file
+rm -rf: to remove a file
+free -g: memory
+nproc: no of cpu 
+df: disk space
+top: shows cpu, memory, disk space
+man: used for pages describes the cmds
+chmod: grant permissions to file
+ps/ps -ef: shows the processes
+grep: used to search the word 
+'|' parameter takes the output from one cmd to another cmd input
+date: cmd is used to print the date 
+awk cmd
+
+
+some system commands sends the output to stdin e.g. date |grep "time is" will print only time is
+shell is a executable to run the scripts
+
+curl retrive the data from external resources
+e.g. curl -X GET api.foo.com
+wget: downloads the file
+find: find the file
+e.g. find / -name filename
+su user
+sudo su -
+
+kill: stop the process using process id
+signals
+trap : controls the signals
+crontab: used for repetitive
+softlink: 
+hardlink:
+break
+continue
+traceroute: to check the hopes and time taken 
+tracepath
+logrotate
+
+
+
+
+
+chmod 600 first-script.sh
+sh first-script.sh
+sftp username@192.11.22.33 : to transfer a file to VM
+put first-script.sh /home/username/
+
+
+
+
+

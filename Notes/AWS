@@ -1,0 +1,23 @@
+1. Create a AWS account 
+
+2. Create an IAM (Identity Access Management) user for regular use with proper policies for management and accessing of services
+3. create EC2 instance
+    - give a name to the instance
+    - Select the required os version
+    - Select the instance based on the requirement
+    - generate the key value pair or use existing keys to access the EC2 instance through CLI, putty, mobaxterm...
+    - use default or create VPC and add security policies[inbound and outbound traffic] to access the instance
+    - press launch instance  
+4.1. Access the EC2 instace through CLI using SSH(secure shell) connection
+    - cmd: ssh -i keyvaluepair.pem username@198.11.22.123
+4.2. Access the EC2 instance through instance connect in AWS management console
+
+AWS CLI
+    - Install the AWS CLI 
+    - Authenticate the AWS CLI to access aws services
+       cmd: aws configure
+          # enter the access key and private key, region, output format
+          e.g. aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e #create an EC2 instance
+
+We can manage or create Aws services using AWS API by AWS CLI, AWS CFT, AWS CDK
+
