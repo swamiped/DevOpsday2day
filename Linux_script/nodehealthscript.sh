@@ -15,16 +15,16 @@
 # set -e # exit the script when there is a error
 # set -o pipefail #when there is pipefail
 # set -exo
-echo "print the disk space"
+echo "Disk space usage:"
 
 df -h
 
-echo "prints the memory"
+echo "Memory usage:"
 
 free -g
 
-echo "no of cpu"
+echo "Number of CPUs:"
 nproc
 
-echo "prints the processes"
-ps -ef | grep kworker | awk -f " " '{print $2}'
+echo "Processes containing 'kworker':"
+ps -ef | grep kworker | awk '{print $2}'
