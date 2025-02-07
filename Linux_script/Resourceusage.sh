@@ -7,6 +7,8 @@
 # This script is used to get the resource usage
 #######################################
 
+# Inorder to run this script you need to install AWS CLI and configured with your account. use "aws configure" to configure the access keys  
+
 
 # list AWS S3 buckets
 set -x
