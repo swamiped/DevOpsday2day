@@ -63,8 +63,10 @@ traceroute: to check the hopes and time taken
 tracepath
 logrotate
 
-
-
+apt install jq -y # for installing jsonsquery
+curl -s -u "${USERNAME}:${TOKEN}" "$url"
+usermod -aG groupname username
+sudo visudo # to edit the sudoers file
 
 
 chmod 600 first-script.sh
