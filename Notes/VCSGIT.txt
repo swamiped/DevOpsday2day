@@ -1,0 +1,43 @@
+VCS: Version Control System
+Useful for Versioning and Sharing.
+CVN,SVN are centralizeed version control system, 
+GIT is a open source version control system
+GITHUB/GITLAB/Bitbukcet is on top the GIT giving further functionalities like Usability, issues, commenting, Reviewing and project management.
+
+1.install GIT
+2. git init -creates an repository in the local folder
+3. it will creates an .git folder which maintains the changes in your repository
+4. Everything you create in this folder it will store it in objects
+5. hooks prevents unintensional events like committing passwords, committing api tokens.
+6. config is used to configure your credentials, secrets,TLS certificates.
+7. git status: shows the tracked and modified files
+8. git diff: shows the exact changes made in the files.
+9. git commit -m "message": commit the changes
+10. git log : shows the commits made in the repository.
+11. git reset --hard 39u43243294239: to move back to previous commit.
+12. git checkout/stash filename: you want to delete the changes
+13. git push: used to push the changes to the remote repository.
+14. git remote add: to add the remote repository location
+15. git clone: Used to download the remote repository using HTTPS/SSH.
+16. fork: used to copy the repository.
+
+ssh-keygen -t rsa: creates a public and private key then copy Public key located in .ssh folder to GITHUB for Authentication
+
+GIT branching startergies:
+Feature branch: is a feature/changes that is a separating from main/master when you are sure everything is fine then you are gonna merge it to the main.
+Release branch: Building the code using release branch instead of Master branch.
+Master/main/trunk branch: Every branch comes from the main branch.
+hostfix branch: immmediate changes required in production.
+Every changes in all branches finally committed to Master branch, when everything is fine.
+
+rm -rf folder_name: to remove a folder
+git branch branchname: creates a branch
+git checkout -b branchname: creates a branch and move to the branch
+git merge: used to merge the changes in the main branch on top of the main branch
+git cherrypick: to add the particular changes in the branch
+git rebase: used to merge changes into the main branch in a linear way
+
+git log --oneline: shows the commits in one line
+
+
+

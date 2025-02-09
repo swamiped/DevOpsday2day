@@ -1,0 +1,25 @@
+CFT(Cloud Formation Template), ARM(AZURE Resource Manager), Openstack (on-premises) are Infrastructure As Code
+
+Terraform is API As Code is a concept which interacts with any cloud provider using API
+API is a application program Interface, which interacts with API  programmatically.
+
+
+
+Terraform <------------> TerraformProvider <-------------> Target API
+
+
+- Manage any Infrastructure
+- Track your Infrastructure
+- Automate Changes
+- Standard Configuration
+- Collaborate
+
+
+
+write: Define Infrastructure in configuration files
+
+Plan(Dry Run): Review the changes Terraform will make to your infrastructure.
+
+Terraform Apply: Terraform provisions your infrastructure and updates the state file.
+you should always store the state file remotely not in local and git
+

@@ -1,0 +1,45 @@
+Configuration management is a configuration and management of a multiple servers infrastructure, 
+1. upgrades
+2. Secure patched
+3. installation
+
+Ansible is a open source configuration Management tool used to automate infrastructure management and configuration, using ansible you can configure hundreds of thousands of servers with just a single command.
+Ansible uses playbook written in Yaml syntax where you can define all your tasks and configuration and that you want to apply on servers.
+Along with playbook you need host file or inventory file which contains ip address of all servers of whcih you want to run the playbook
+
+After you have the playbook and define all servers in the host file, you can run the ansible command which will run the playbook on the all servers which are defined in the host file using ssh.
+
+
+Configuration of thousands of servers, there are tools like puppet, ansible, salt, chef.
+push model and pull model
+
+Ansible is a agentless
+Ansible is a push model
+Ansible has a dynamic inventory
+Ansible is simple
+Ansible uses a yaml language
+Ansible supports both windows using protocol winRM and linux using protocol SSH.
+Ansible uses python language to create modules.
+Ansible needs public Ip address and SSH allowed to the servers.
+
+puppet is a master/slave model.
+puppet is a pull model.
+
+
+disadvantages:
+- windows issues
+- Debugging issues
+- performance issues
+
+Ansible adhoc commands used for single commands and playbook are used for multiple commands
+grouping 
+Ansible roles 
+
+ubuntu:
+apt Install ansible
+
+ansible is used for adhoc commands
+ansible-playbook is used for playbooks
+
+Ansible role is efficient way to write playbooks that improves efficieny to write complex ansible playbook
+ansible-galaxy role init kubernetes

@@ -1,0 +1,15 @@
+ansible -i inventory all -m ping
+or
+ansible all/hostsgroupname -m ping -i inventory
+
+ansible -i inventory all -m "shell" -a "touch devopsclass"
+
+ansible -i inventory all -m "shell" -a "nproc"
+
+ansible -i inventory all -m "shell" -a "df"
+
+# ansible-inventory -i inventory.ini --list
+
+# ansible-playbook -vvv -i inventory.ini playbook.yml #verbose mode: shows the output of the playbook
+
+# ansible-galaxy role init kubernetes : to create a role

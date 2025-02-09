@@ -1,0 +1,15 @@
+---
+# This is a sample playbook to install nginx and start the service using apt
+- name: install nginx and start
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install nginx
+      ansible.builtin.apt: #or use apt: module (or) shell: apt install nginx  
+        name: nginx
+        state: present
+
+    - name: Start nginx
+      ansible.builtin.service: #or use service: module
+        name: nginx
+        state: started

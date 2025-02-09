@@ -74,7 +74,11 @@ sh first-script.sh
 sftp username@192.11.22.33 : to transfer a file to VM
 put first-script.sh /home/username/
 
+uname -s : gives the os type
+uname -a : gives the detailed information
+cat /etc/os-release : gives the os details
 
+ 
 
 
 

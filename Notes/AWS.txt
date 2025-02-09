@@ -21,3 +21,26 @@ AWS CLI
 
 We can manage or create Aws services using AWS API by AWS CLI, AWS CFT, AWS CDK
 
+aws configure --profile [profile-name] set aws_access_key_id ""
+aws configure --profile [profile-name] set aws_secret_access_key ""
+
+
+
+
+1. EC2
+2. VPC
+3. S3
+4. AWS KMS
+5. AWS EKS
+6. AWS CloudTrail
+7. Fargate
+8. ECS
+9. ELK stack
+10. AWS configuration
+11. Billing service
+12. AWS code build services[CodeBuild, codepipeline, CodeDeploy]
+13. Cloudwatch
+14. IAM
+15. AWS Lambda
+16. EBS
+
