@@ -1,0 +1,12 @@
+Codebase: Multiple apps sharing the same code is a violation of twelve-factor
+Dependencies: Explicitly declare and isolate dependencies, A twelve-factor app never relies on implicit existence of system-wide packages.
+config: The twelve-factor app stores config in environment variables
+Processes: Twelve-factor processes are stateless and share-nothing, Sticky sessions are a violation of twelve-factor and should never be used or relied upon
+Build, release , run: The twelve-factor app uses strict separation between the build, release, and run stages.
+backing services: Treat backing services as attached resources
+port binding: The twelve-factor app is completely self-contained
+concurrency
+Disposability: The twelve-factor app's processes are disposable, meaning they can be started or stopped at a moment's notice.
+Devprod parity: The twelve-factor app is designed for continuous deployment by keeping the gap between development and production small.
+Logs: A twelve-factor app never concerns itself with routing or storage of its output stream. Store logs in a centralized location in a structured format.
+Admin Processes

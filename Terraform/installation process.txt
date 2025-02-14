@@ -1,0 +1,20 @@
+###################################CENTOS/RHEL###########################################
+# Reference link: https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
+#   https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+1. Install yum-config-manager to manage your repositories.
+   sudo yum install yum-utils
+2. Use yum-config-manager to add the official HashiCorp Linux repository.
+   sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+3. Install Terraform.
+   sudo yum -y install terraform
+
+###################################UBUNTU#################################################
+
+
+1. terraform init: check the syntax of the configuration files in the current directory and download the provider plugins.
+2. terraform plan: show the execution plan of the configuration files in the current directory.
+3. terraform apply: apply the configuration files in the current directory.
+4. terraform destroy: destroy the resources created by the configuration files in the current directory.
+5. terraform validate: check the syntax of the configuration files in the current directory.
+6. terraform fmt: format the configuration files in the current directory.
+7. terraform show: show the state of the resources created by the configuration files in the current directory.

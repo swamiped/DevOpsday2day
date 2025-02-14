@@ -1,0 +1,46 @@
+jenkins is a open source, plugin Library, Active community,
+resource support.
+
+Jenkins is an open source automation server that accelerate s/f development.
+It orchestrate  the s/w delivery from building, testing, to deploymnet.
+
+jobs:  are building blocks defining specific tasks such as compiling code, running, tests, or deploying
+
+Build: Each execution of a job, with jenkins maintaining a history for troubleshooting
+
+Freestyle Project: The default project type, offerinmg flexible job definitions
+Pipeline: chain jobs together to automate tasks from development to deploymnet
+stages: Group related jobs into phases like Build, test, deploly for clarity
+Nodes: machines where jenkins executes jobs, with a single controller of multiple agents.
+Plugins: Extend jenkins functionalities, integrating with various tools and technologies.
+
+jenkins controller node/ master node coordinating the entire CI/CD process.
+basic deployment[controller + worker node]
+nodes are worker machines connected through SSH, JNLP, ...
+Executers
+Agents 
+
+Jenkins installation:
+ Jenkins_HOME : /var/lib/jenkins
+ on ubuntu:
+     java -version
+     journalctl -u jenkins:  to check logs
+     sudo apt install fontconfig openjdk-17-jre -y
+     systemctl restart jenkins
+
+Types:
+Freestyle project
+Pipeline Project
+Multibranch Pipeline
+Maven Project
+Multiconfiguration project
+Organization Folders
+plugins are extensions 
+
+check the logs: sudo journalctl -xeu jenkins.service
+Jenkins cli 
+Jenkins RestAPI
+
+
+
+
