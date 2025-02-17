@@ -1,0 +1,32 @@
+Yaml file is used to represent data, configuration data
+Yaml key value pair format
+    e.g. fruit: apple
+
+Array in yaml:
+    Fruit:
+      - apple
+      - orange
+      - banana
+Dictionary in yaml:
+    Fruit:
+      apple: 1
+      orange: 2
+      banana: 3
+  
+
+List of Dictionary in yaml:
+    Fruit:
+      - apple: 1
+      - orange: 2
+      - banana: 3
+Dictionary in Dictionary in yaml:
+    Fruit:
+      apple:
+        color: red
+        taste: sweet
+      orange:
+        color: orange
+        taste: sour
+      banana:
+        color: yellow
+        taste: sweet  

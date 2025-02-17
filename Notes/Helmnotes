@@ -1,0 +1,43 @@
+Helm is a package manager for kubernetes, 
+Installation prerequisites:
+    - Functional kubernetes cluster, kubectl installed & configured on your computer with right login details.
+Install helm:
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get-script.sh
+    helm version
+
+    helm install wordpress
+    helm uninstall wordpress
+    helm rollback wordpress
+    helm upgrade wordpress
+
+helm cli client is installed on your system helps to perform action on your cluster.
+helm 3 uses 3-waystatergic  merge patch
+
+helm cli used to perform actions installing, upgrading and rollback etc.,
+Helm components:
+helm 3
+
+# Helm is a package manager for Kubernetes
+# Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
+# Helm uses a packaging format called charts. A chart is a collection of files that describe a related set of Kubernetes resources.
+# A single chart might be used to deploy something simple, like a memcached pod, or something complex, like a full web app stack with HTTP servers, databases, caches, and so on.
+# Helm is a tool that streamlines installing and managing Kubernetes applications. Think of it like apt/yum/homebrew for Kubernetes.
+
+
+
+helm search hub wordpress
+helm search repo wordpress
+helm repo add reponame https://repo-url-path.com/reponame
+helm repo list
+helm install amaze-surf bitnami/apache --dry-run
+helm list
+helm uninstall amaze-surf
+ helm repo remove hashicorp
+helm history nginx-release
+helm rollback nginx-release 1
+helm upgrade dazzling-web bitnami/nginx --version 18.3.6
+helm lint ./nginx-chart
+helm template ./nginxchart --debug
+
