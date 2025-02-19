@@ -20,7 +20,7 @@ AWS CLI
           e.g. aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e #create an EC2 instance
 
 We can manage or create Aws services using AWS API by AWS CLI, AWS CFT, AWS CDK
-
+aws confire list : to see the existing profile.
 aws configure --profile [profile-name] set aws_access_key_id ""
 aws configure --profile [profile-name] set aws_secret_access_key ""
 
@@ -43,4 +43,5 @@ aws configure --profile [profile-name] set aws_secret_access_key ""
 14. IAM
 15. AWS Lambda
 16. EBS
+
 

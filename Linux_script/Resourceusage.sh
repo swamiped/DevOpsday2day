@@ -11,8 +11,8 @@
 
 
 # list AWS S3 buckets
-set -x
-set -e
+set -x # to enable debugging
+set -e # to exit the script if any command fails
 echo " list s3 instance"
 aws s3 ls
 

@@ -7,19 +7,23 @@ API is a application program Interface, which interacts with API  programmatical
 
 Terraform <------------> TerraformProvider <-------------> Target API
 
+Terraform creates a api to interact with target api
 
 - Manage any Infrastructure
 - Track your Infrastructure
 - Automate Changes
-- Standard Configuration
+- Standard Configuration 
 - Collaborate
 
 
 
-write: Define Infrastructure in configuration files
+Terrafrom lifecycle:
+    write: Define Infrastructure in configuration files
 
-Plan(Dry Run): Review the changes Terraform will make to your infrastructure.
+    Plan(Dry Run): Review the changes Terraform will make to your infrastructure.
 
-Terraform Apply: Terraform provisions your infrastructure and updates the state file.
-you should always store the state file remotely not in local and git
+    Terraform Apply: Terraform provisions your infrastructure and updates the state file.
+***** you should always store the state file remotely not in local and git *****
+    Terraform destroy: terraform deletes the provisioned infrastructure.
+
 
