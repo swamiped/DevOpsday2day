@@ -1,0 +1,26 @@
+CICD is Continuous Integration and Continuous Deployment/Continuous Delivery
+
+CI is a process to integrate multiple tools or processes before deploying to customer
+CD is a process of delivering/deploying to the customer with coninuous improvement.
+
+unit testing,code build, static code analysis, code quality/ vulnerability, Automation testing[performance +Regression + END2END testing], Reports, Deployment is common process to delivering product.
+
+the way to automating above things is a CICD process.
+
+
+e.g. jenkins is a orcehestrator tool, by using pipelines, github actions
+Pipeline consists of Build, test, reporting, containerizing, security analysis, deployment.
+
+
+# ############################################################
+# usual process of deployment of a product
+#  
+# App development --> SVC --> jenking  --> ENV[Dev + staging + Production]
+#
+# ############################################################
+
+
+
+
+
+

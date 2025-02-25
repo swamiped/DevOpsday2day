@@ -1,0 +1,11 @@
+Agile is a methodology to deploy your application in a small chuncks in a sprint manner
+
+Early, we used to deploy using waterfall model 
+    - In waterfall model we acquire everythng in one go and implement in one go
+    - so it takes lot of time to reach the customers
+
+
+Jira tool is a project management tool, it is sued to track the progress of a project in sprint 
+    - it have dashboard
+confluence is a knowledge sharing platform
+servicenow is a incident or change management tool

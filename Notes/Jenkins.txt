@@ -44,3 +44,50 @@ Jenkins RestAPI
 
 
 
+################################################################################################
+# Jenkins uses Master/slave approach
+#
+# we can use two types of approaches:
+#    1. Using EC2 instances/VM based approach: 
+#       In this approach, jenkins will be on one ec2 instance as master then deploy the codes to slave instances.
+#    2. Using Docker container based approach:
+#        In this approach, jenkins uses docker daemon, and deploys the code to containers.
+#
+# Better approach is using docker:
+#   you can scale containers to zero 
+#   you can run multiple versions of your applicaion easily
+#   it is light weight.
+#   Less maintenance
+#
+#
+#
+##############################################################################################
+
+For JDK & Jenkins installation in CentOS:
+    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    sudo yum upgrade
+    sudo yum install fontconfig java-17-openjdk
+    sudo yum install jenkins
+    sudo systemctl daemon-reload
+    sudo systemctl enable jenkins
+    sudo usermod -aG docker jenkins : adding jenkins user to docker group
+    sudo gpasswd -d jenkins docker : remove jenkins user from docker group
+    cat /etc/passwd | grep "jenkins" to check whether the user jenkins is available 
+    cat /etc/groups | grep 'docker' : to check the users who belongs to docker group
+
+
+
+#######################################################################################################################
+#           
+#      sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent : allowing port 8080 to connect from host machines
+#      sudo firewall-cmd --reload : to reload the firewall
+#      sudo firewall-cmd --list-all : to list the firewall
+#      sudo firewall-cmd --zone=public --remove-port=8080/tcp --permanent : removing port 8080 
+#
+#       
+#######################################################################################################################     
+
+
+
+

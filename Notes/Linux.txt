@@ -72,6 +72,7 @@ sudo visudo # to edit the sudoers file
 chmod 600 first-script.sh
 sh first-script.sh
 sftp username@192.11.22.33 : to transfer a file to VM
+scp filename user@ip-add-ress:/home/user/ : to copy the "filename" to "userfolder"
 put first-script.sh /home/username/
 
 uname -s : gives the os type
