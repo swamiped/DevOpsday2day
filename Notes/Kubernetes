@@ -1,0 +1,139 @@
+Diff b/w docker and K8s
+    Docker is a containerization platform
+    k8s is a container orchestration platform
+problems with Docker:
+    - containers are ephermal(short living, die and revive anytime) in nature
+    - relies on Single host nature of docker container
+    - no auto healing, when container is down or killed.
+    - no auto scaling, automatically can't increase the containers
+    - is a simple platfrom, doesn't provide any enterprise support.
+
+K8s:
+    kubernetes solves the problems 
+    k8s by default is a cluster, group of nodes
+    k8s in general it is installed in a master/slave architecture.
+    k8s has replicaset which automatically increases(hpa- horizontal pod autoscaler) the pods.
+    k8s has auto-healing feature controls & fix the damage, which automatically creates the pod when pod is down.
+    k8s has community support.
+
+CR(custom Resources), custom resource definition, advanced autoloadbalancing(ingress controller).
+
+
+------------------------------------------------------------------------------------------------------------------
+
+K8s Architecture:
+    K8S has Control plane and Data plane
+    In control plane has API server, etcd, Scheduler, controller manager, cloud control manager
+    In Data plane has kubelet, kubeproxy, container runtime.
+
+Data Plane/worker node:
+    - Docker has container runtime that is docker shim, without continer runtime containers are not gonna work.
+      Like Docker Kubernetes has master node and worker nodes, every request will goes through control node i.e. master, kubelet is responsible for maintaining container 
+    - Like Docker , k8s using container runtime are containerd, dockershim, crio.
+    - docker has default network that is docker0 or bridge network,
+      like Docker, k8s has kubeproxy uses iptables, is responsible for networking and load balancing to container.
+
+
+Master node/ control plane:
+    - API server(core): is basically exposes the data plane and takes input requests from external world
+    - Scheduler: is responsible for scheduling resources in the worker node takes information from API server.
+    - etcd: acts up as a backup service, is a key value store, stores the entire the cluster information as objects.
+    - controller manager: k8s has controllers, those are replicaset, deployments which is managed by controller manager.
+    - cloud controller manager: Cloud Control Manager (CCM) is typically a tool or service used to manage and monitor cloud infrastructure, resources, and configurations. 
+
+-----------------------------------------------------------------------------------------------------------
+k8s development envs: minikube, k3s, kind, k3d
+
+minikube is a single node cluster
+K8S production systems:
+    EKS, GKE,AKS, Openshift, GKE, Tanzu, Rancher gives better user experience.
+    most used order:
+        - kubernetes
+        - openshift
+        - Rancher
+        - Tanzu
+        - EKS
+        - AKS
+        - GKE
+        - DKE
+kops, kubeadm
+
+kops is k8s+operations
+k8s lifecycle:
+    installation
+    upgrades
+    modifications
+    Deletion of clusters
+kops is the manages the life cycle of k8s
+
+kubectl get all : shows all in the namespaces
+kubectl get all -A: shows all namespaces
+
+----------------------------------------------------------------------------------------------
+
+pod is definition of how to run a container or containers.
+    - everything will be written on a yaml
+    - pod can have single container or multiple containers(sidecar containers, init containers)
+    - pod is a wrapper to a containers
+    - pod is allocated with clusterIp address by kubeproxy
+    
+kubectl is command line tool for kuberntes like docker cli for docker
+
+kubectl create -f nginx.yaml
+kubectl get pods -o wide
+kubectl describe pod nginx
+
+-----------------------------------------------------------------------------------------------
+
+Kubernetes deployment:
+    - deployment is useful for autohealing and autoscaling.
+        where it creates a new pod when it is down
+        it will also increases pod count using intermediate replicaset controller.
+    - deployment manifest yaml file will takes of these.
+    controllers maintains a desired state on a cluster, they're default controllers and custom controllers.
+
+    kubectl get pods -w
+    kubectl create -f deployment.yaml
+-----------------------------------------------------------------------------------------------
+
+kubernetes Services:
+    service is critical component of k8s, 
+    1. it acts as a load balancer(simple round robin), and it will accepts the requests from users and send requests to pods.
+    2. Service discovery: it uses labels and selectors to when new pod created to farward traffic to that pod.
+    3. It can expose to External world
+        - we can create service type of 3 types: "ClusterIP", "ExternalName", "LoadBalancer", "NodePort"
+            ClusterIP: we can access within the cluster
+            NodePort: we can access within the your network
+            LoadBalancer: we can access your application external world
+
+--------------------------------------------------------------------------------------------------
+
+Kubernetes Ingress:
+    kubernetes does not have enterprise load balancing
+    problems before ingress:
+        1. Enterprise load balancing (100s of feature)
+            sticky sessions, 
+            path based load balancing, 
+            while list and balck list load balancing,
+            Ratio based load balancing, 
+            domain based load balancing.
+        2. Static Ip address charges by Cloud providers
+            - charges for static Ip addresses for the kubernetes services
+    Openshift is a kubernetes distribution which introduced routes for above problems.
+    kubernetes introduced Ingress resource, helps us to use our own load balancers by installing ingress controllers by using Ingress.
+    # minikube addons enable ingress
+    # kubectl get pods -n ingress-nginx
+    # kubectl logs nginx-pod -n namespace
+
+
+    
+    
+
+
+
+
+
+
+
+
+

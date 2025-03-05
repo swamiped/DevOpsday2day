@@ -1,0 +1,40 @@
+Three tier architecture has 3 layers:
+    - UI layer
+    - Business layer
+    - Data layer
+
+UI layer:
+    - User interface
+    - Front end
+    - Presentation layer
+    - Client side
+    - Web browser
+    - Mobile app
+Business layer:
+    - Application layer
+    - Logic layer
+    - Middle layer
+    - Server side
+    - Backend
+    - API
+    - Web server
+Data layer:
+    - Database
+    - Storage
+    - Data store
+    - Data base server
+
+Three tier architecture is a client-server architecture in which the user interface, functional process logic, 
+data storage and data access are developed and maintained as independent modules on separate platforms.
+
+
+MERN stack:
+    - MongoDB
+    - Express
+    - React
+    - Nodejs
+MongoDB: means humongous, it is a NoSQL database, it is a document oriented database, it is a schema less database.
+Express: it is a web application framework for Node.js, it is used to build web applications and APIs.
+React: it is a JavaScript library for building user interfaces, it is used to build single page applications.
+Nodejs: it is a JavaScript runtime built on Chrome's V8 JavaScript engine, it is used to build server side applications.
+

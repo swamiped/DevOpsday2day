@@ -67,7 +67,7 @@ apt install jq -y # for installing jsonsquery
 curl -s -u "${USERNAME}:${TOKEN}" "$url"
 usermod -aG groupname username
 sudo visudo # to edit the sudoers file
-
+apt-get install -y iputils-ping :to install ping 
 
 chmod 600 first-script.sh
 sh first-script.sh

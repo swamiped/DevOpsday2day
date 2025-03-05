@@ -1,0 +1,114 @@
+VM: virtual machine or virtual server, can be established by using hypervisor
+    It is fully isolated environment with logical separation from physical server
+    It contains its own OS[kernal + software]
+    using hypervisor we can create VM.
+    
+container: it is a isolated environment with logical separation uses underlying os-kernal 
+    It is a light weight machine
+    by using docker/any container platform like crio to create and run a container
+    container is a package of minimal os or base image + application + application libraries + sytem dependencies.
+
+
+we can use docker two ways:
+    1. install docker directly on OS
+    2. install docker on VM [Better approach]
+
+Docker is a cotainerization platform, using Dockerfile we can create images and then by using images we can create docker containers with docker engine.
+    docker build Dockerfile : to create an image
+    docker run imagename : to run the containers 
+
+drawbacks:
+    - single point of failure[SPOF]: incase docker engine fails, all containers will stop working.
+    - to takes more space for layers
+using Buildah, Podman we can create images and solves above drawbacks
+
+
+Containers base images have 
+    - files and folders those are [/bin, /sbin, /etc, /var, /root, /lib, /usr]
+
+    - access host file system, system calls, Namespaces, control groups, Network groups.
+
+Docker CLI, Docker daemon, docker registry:
+    docker cli is useful to run cmds to give instruction to give to daemon
+    docker daemon is receives instructions from cli and runs and maintains the containers
+    docker registry is used to store the images that docker daemon created.
+
+
+Dockerfile: 
+    it contains layers of instructions to create an image like base image, app depedencies, libraries, exection cmd to start the container.
+
+sudo apt install docker.io -y :to install docker in ubuntu
+docker build -t swamiped/helloswami:latest . : build the image with swami/helloswami:latest
+docker run -it swamiped/helloswami
+
+Install Django module:
+    #############################################################################
+    # sudo apt update
+    # sudo apt install python3-venv
+    # python3 -m venv myenv
+    # source myenv/bin/activate
+    # pip install django
+    # deactivate
+    #############################################################################
+
+    python -m pip install Django
+    python -m django --version
+    django-admin startproject MyDevopsweb PythonDjangoapp
+                        or
+    django-admin startproject MyDevopsweb 
+
+
+####################################################################################
+
+Mulitstage Docker Builds and distroless images:
+
+Mulitstage build is useful for building images in a multi stages with minimum images size, it will run on any container platform
+Distroless images are light weight images which have only runtime env, which is to just run the application.
+
+
+####################################################################################
+
+Docker Bind Mounts and Volumes:
+    problems with containers:
+        1. Containters are epheremal or short lived in nature.when the containers stopped or failed the data inside the conainer will loss data.
+        2. containers which are dependepant on other containers data will not be accessible, if container is down.
+        3. containers can't acccess the host system data.
+    solution:
+        Docker comes up with 
+        1. Bind-mount: binding specific directory to the containers.
+        2. Volumes: provides better life cycle
+                1. using docker CLI, we can create a volumes and mount it to the container.
+                2. using volumes, we can create, destroy and manage volumes
+        syntax: docker -v src:dest
+                docker --mount src:dest [--mount option is more verbose than -v option]
+    e.g. docker volume ls : lists the volumes in the host
+         docker volume create swami : to create volume in the host
+         docker volume inspect swami : to get the detailed information of the volume
+         docker volume rm swami : to delete the volume
+         docker run -d --mount type=volume,source=swami,target=/app nginx:latest 
+         docker inspect 2342 : to inspect the container
+
+########################################################################################
+
+Docker Networking:
+    containers need to interact with eachother
+    containers needs isolation also
+Bridge networking: 
+    veth0/docker0
+    custom bridge network:
+host networking:
+overlay networking:
+
+Bridge networking:
+    - create custom network:
+        e.g. docker network ls
+             docker network rm networkname
+             docker network create networkname
+             docker run -d --name containername --network=networkname imagename
+             docker inspect contianername
+
+
+
+
+
+
